@@ -27,7 +27,7 @@ Top-Down Adventure is a high-fantasy action RPG built using Pygame. It features 
     ```
 3. Clone this repository:
     ```bash
-    git clone https://github.com/your_username/your_project_name.git
+    git clone https://github.com/JEschete/TopDownAdventure.git
     ```
 4. Navigate to the project directory:
     ```bash
