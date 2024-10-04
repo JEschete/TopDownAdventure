@@ -31,7 +31,7 @@ Top-Down Adventure is a high-fantasy action RPG built using Pygame. It features 
     ```
 4. Navigate to the project directory:
     ```bash
-    cd your_project_name
+    cd ./TopDownAdventure
     ```
 5. Run the game:
     ```bash
