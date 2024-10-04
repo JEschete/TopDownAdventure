@@ -145,4 +145,4 @@ The project is composed of multiple modules that handle different aspects of the
 
 ## License
 
-This project is licensed under the GNU Open License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GPL-3.0 license - see the [LICENSE](LICENSE) file for details.
