@@ -119,17 +119,6 @@ The project is composed of multiple modules that handle different aspects of the
 - **L2 / R2:** Cycle through magic spells
 - **Options Button:** Pause the game
 
----
-
-## Known Issues
-
-- **Menu Glitches:** Navigating between menus (pause, help, level-up) can cause flickering, and the game state gets stuck.
-- **No Sprites:** Currently, all entities are rendered as simple shapes using Pygame's primitive drawing functions. There are no sprites for characters, enemies, or items.
-- **Enemy EXP Bug:** Defeated enemies are not always granting experience points to the player.
-- **Saving/Loading Unstable:** Save/load functionality is untested due to menu-related issues.
-- **Single Level:** The level is procedurally generated at runtime and currently remains the same throughout the game session.
-- **Unknown Behavior** The healers have not been tested yet to see if they actually heal their allies. 
-- **Controller Input** The controller inputs have not been tested yet.
 
 ---
 
