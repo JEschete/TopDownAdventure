@@ -1,4 +1,40 @@
-# --- Start of player.py ---
+"""
+This module defines the Player class for a top-down adventure game using Pygame.
+Classes:
+    Player: Represents the player character in the game.
+Player class:
+    Methods:
+        __init__(self, x, y):
+            Initializes the player with position (x, y) and various attributes.
+        update(self, input_manager, obstacles, enemies, coins, projectiles):
+            Updates the player's state based on input actions and interactions with the game world.
+        move(self, dx, dy, obstacles):
+            Moves the player by dx and dy while handling collisions with obstacles.
+        collide(self, dx, dy, obstacles):
+            Handles collisions with obstacles when the player moves.
+        attack(self, enemies):
+            Handles the player's attacking logic and damages enemies within attack range.
+        get_attack_rect(self):
+            Returns the attack area based on the player's facing direction.
+        cast_magic(self, projectiles, enemies):
+            Handles the magic attack logic, creating a projectile targeting the nearest enemy.
+        take_damage(self, amount):
+            Reduces the player's health by the specified amount, considering active power-ups.
+        increase_score(self, amount):
+            Increases the player's score with a multiplier and handles combo logic.
+        reset_multiplier(self):
+            Resets the score multiplier and combo counter.
+        draw(self, surface):
+            Draws the player and its attack area if attacking.
+        increase_stat(self, stat):
+            Increases the specified stat upon leveling up.
+        get_state(self):
+            Returns the current state of the player for saving.
+        set_state(self, state):
+            Sets the player's state from a saved state.
+        update_power_ups(self):
+            Updates power-up timers and effects.
+"""
 
 import pygame
 import math
@@ -313,4 +349,3 @@ class Player(pygame.sprite.Sprite):
                     if power == 'speed':
                         self.speed = self.base_speed
 
-# --- End of player.py ---

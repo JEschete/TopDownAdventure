@@ -1,4 +1,23 @@
-# --- Start of projectile.py ---
+"""
+Projectile class represents a projectile in the game.
+Attributes:
+    radius (int): Radius of the projectile.
+    color (tuple): Color of the projectile.
+    rect (pygame.Rect): Rect object representing the projectile's position and size.
+    dx (float): Change in x-direction per update.
+    dy (float): Change in y-direction per update.
+    speed (int): Speed of the projectile.
+    damage (int): Damage dealt by the projectile.
+    target_type (str): Type of target ('enemies' or 'player').
+    target (pygame.sprite.Sprite): Specific target sprite.
+Methods:
+    __init__(x, y, dx, dy, damage, color=CYAN, target_type='enemies', target=None):
+        Initializes the projectile with given parameters.
+    update(obstacles, player, enemies):
+        Updates the projectile's position and checks for collisions.
+    draw(surface):
+        Draws the projectile on the given surface.
+"""
 
 import pygame
 import math
@@ -60,4 +79,3 @@ class Projectile(pygame.sprite.Sprite):
     def draw(self, surface):
         pygame.draw.circle(surface, self.color, self.rect.center, self.radius)
 
-# --- End of projectile.py ---

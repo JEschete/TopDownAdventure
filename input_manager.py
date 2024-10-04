@@ -1,6 +1,22 @@
-# --- Start of input_manager.py ---
+"""
+InputManager class to handle keyboard and joystick inputs for a game.
+Attributes:
+    joystick (pygame.joystick.Joystick): The joystick object if a joystick is connected.
+    actions (dict): Dictionary to store the current state of actions.
+    previous_actions (dict): Dictionary to store the previous state of actions.
+Methods:
+    __init__():
+        Initializes the InputManager, setting up the joystick and action dictionaries.
+    handle_input(events):
+        Updates the actions dictionary based on the current key states and joystick inputs.
+    get_actions():
+        Returns the current action states.
+    was_pressed(action):
+        Checks if an action was just pressed.
+"""
 
 import pygame
+
 
 class InputManager:
     def __init__(self):
@@ -91,4 +107,3 @@ class InputManager:
         """Check if an action was just pressed."""
         return not self.previous_actions.get(action, False) and self.actions.get(action, False)
 
-# --- End of input_manager.py ---

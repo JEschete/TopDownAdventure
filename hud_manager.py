@@ -1,4 +1,19 @@
-# --- Start of hud_manager.py ---
+"""
+HUDManager class is responsible for managing and drawing the Heads-Up Display (HUD) elements on the game screen.
+Attributes:
+    player (Player): The player object containing health, mana, experience, and other attributes.
+Methods:
+    __init__(player):
+        Initializes the HUDManager with the player object.
+    draw_hud(surface):
+        Draws the HUD elements on the given surface, including health bar, mana bar, experience bar, and various text elements.
+    draw_game_over(surface, enemies_defeated, score):
+        Draws the Game Over screen with the number of enemies defeated and the player's score.
+    draw_pause(surface):
+        Draws the Pause screen with options to resume, get help, save, and load the game.
+    draw_level_up_menu(surface):
+        Draws the Level Up menu with options to increase various player stats.
+"""
 
 import pygame
 from constants import *
@@ -71,5 +86,3 @@ class HUDManager:
         draw_text(surface, "2. Increase Magic Damage", (WIDTH // 2 - 100, HEIGHT // 2), WHITE)
         draw_text(surface, "3. Increase Max Health", (WIDTH // 2 - 100, HEIGHT // 2 + 50), WHITE)
         draw_text(surface, "4. Increase Sword Damage", (WIDTH // 2 - 100, HEIGHT // 2 + 100), WHITE)
-
-# --- End of hud_manager.py ---

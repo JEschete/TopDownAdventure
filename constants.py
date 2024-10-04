@@ -1,6 +1,37 @@
-# --- Start of constants.py ---
+"""
+This module sets up the constants and initial configurations for the Top-Down Adventure game.
+Modules:
+    pygame: A set of Python modules designed for writing video games.
+Constants:
+    WIDTH (int): The width of the game screen.
+    HEIGHT (int): The height of the game screen.
+    HUD_HEIGHT (int): The height of the Heads-Up Display (HUD).
+    SCREEN (pygame.Surface): The display surface for the game.
+    FPS (int): Frames per second for the game loop.
+    WHITE (tuple): RGB color value for white.
+    GREEN (tuple): RGB color value for green.
+    DARK_GREEN (tuple): RGB color value for dark green.
+    RED (tuple): RGB color value for red.
+    DARK_RED (tuple): RGB color value for dark red.
+    BLUE (tuple): RGB color value for blue.
+    BLACK (tuple): RGB color value for black.
+    GRAY (tuple): RGB color value for gray.
+    YELLOW (tuple): RGB color value for yellow.
+    CYAN (tuple): RGB color value for cyan.
+    MAGENTA (tuple): RGB color value for magenta.
+    ORANGE (tuple): RGB color value for orange.
+    GOLD (tuple): RGB color value for gold.
+    BROWN (tuple): RGB color value for brown.
+    PURPLE (tuple): RGB color value for purple.
+    FONT (pygame.font.Font): The default font for the game.
+    FONT_LARGE (pygame.font.Font): The large font for the game.
+    TILE_SIZE (int): The size of each tile in the game.
+    MAGIC_SPELLS (list): List of available magic spells.
+    SPELL_COLORS (dict): Dictionary mapping each spell to its corresponding color.
+"""
 
 import pygame
+
 
 # Initialize Pygame
 pygame.init()
@@ -43,4 +74,3 @@ TILE_SIZE = 40
 MAGIC_SPELLS = ['Fireball', 'Ice Spike', 'Lightning Bolt']
 SPELL_COLORS = {'Fireball': RED, 'Ice Spike': CYAN, 'Lightning Bolt': YELLOW}
 
-# --- End of constants.py ---

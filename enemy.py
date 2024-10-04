@@ -1,10 +1,51 @@
-# --- Start of enemy.py ---
+"""
+Enemy class representing different types of enemies in the game.
+Attributes:
+    width (int): Width of the enemy sprite.
+    height (int): Height of the enemy sprite.
+    type (str): Type of the enemy (e.g., 'melee', 'archer', 'tank', 'healer', 'assassin', 'boss').
+    color (tuple): Color of the enemy sprite.
+    speed (float): Speed of the enemy.
+    health (int): Current health of the enemy.
+    max_health (int): Maximum health of the enemy.
+    exp_value (int): Experience value awarded to the player upon defeating the enemy.
+    attack_cooldown (int): Cooldown period between attacks for certain enemy types.
+    heal_cooldown (int): Cooldown period between heals for healer type enemies.
+    rect (pygame.Rect): Rectangular area representing the enemy's position and size.
+Methods:
+    __init__(self, x, y, enemy_type='melee'):
+        Initializes the enemy with the given position and type.
+    update(self, player, obstacles, projectiles):
+        Updates the enemy's behavior based on its type and interactions with the player, obstacles, and projectiles.
+    move_towards_player(self, player, obstacles):
+        Moves the enemy towards the player, considering obstacles.
+    archer_behavior(self, player, obstacles, projectiles):
+        Defines the behavior for archer type enemies, including movement and attacking.
+    healer_behavior(self):
+        Defines the behavior for healer type enemies, including healing nearby enemies.
+    assassin_behavior(self, player, obstacles):
+        Defines the behavior for assassin type enemies, including movement and attacking.
+    move(self, dx, dy, obstacles):
+        Moves the enemy by the given deltas, considering collisions with obstacles.
+    collide(self, dx, dy, obstacles):
+        Handles collisions with obstacles when the enemy moves.
+    shoot_arrow(self, player, projectiles):
+        Shoots a projectile towards the player.
+    take_damage(self, amount):
+        Reduces the enemy's health by the given amount.
+    draw(self, surface):
+        Draws the enemy on the given surface.
+    draw_health_bar(self, surface):
+        Draws the health bar above the enemy.
+"""
 
 import pygame
 import random
 import math
 from constants import *
 from projectile import Projectile
+
+
 
 class Enemy(pygame.sprite.Sprite):
     def __init__(self, x, y, enemy_type='melee'):
@@ -198,4 +239,3 @@ class Enemy(pygame.sprite.Sprite):
         health_ratio = self.health / self.max_health
         pygame.draw.rect(surface, GREEN, (self.rect.x, self.rect.y - 10, self.rect.width * health_ratio, 5))
 
-# --- End of enemy.py ---

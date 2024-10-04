@@ -1,4 +1,27 @@
-# --- Start of game_manager.py ---
+"""
+game_manager.py
+This module contains the GameManager class, which is responsible for managing the overall game state, including player, enemies, obstacles, potions, coins, projectiles, and various game states such as 'playing', 'paused', 'game_over', and 'level_up'. It also handles input, updates game entities, and manages the drawing of the game screen.
+Classes:
+    GameManager: Manages the overall game state and game entities.
+GameManager Methods:
+    __init__: Initializes the game manager and sets up initial game entities and state.
+    setup_obstacles: Sets up game obstacles like walls and trees.
+    add_random_tree: Adds a tree obstacle at a random location.
+    update: Updates the game state, including player, enemies, and other objects.
+    handle_level_up: Handles the level-up state where the player chooses a stat to increase.
+    update_enemies: Updates all enemies and handles respawns and deaths.
+    spawn_enemy: Spawns an enemy at a random location.
+    spawn_boss: Spawns the boss enemy.
+    update_potions: Handles potions spawning and player picking up potions.
+    update_coins: Handles coins spawning and player collecting coins.
+    update_projectiles: Updates all projectiles.
+    draw: Draws all game entities and the HUD.
+    draw_title_screen: Draws the title screen.
+    show_help_menu: Displays the help menu.
+    save_game: Saves the current game state.
+    load_game: Loads a saved game state.
+    run: Main game loop.
+"""
 
 import pygame
 import sys
@@ -14,6 +37,8 @@ from input_manager import InputManager
 from hud_manager import HUDManager
 from helpers import draw_text
 import pickle  # For save/load functionality
+
+
 
 class GameManager:
     def __init__(self):
@@ -394,4 +419,4 @@ if __name__ == "__main__":
     game = GameManager()
     game.run()
 
-# --- End of game_manager.py ---
+
