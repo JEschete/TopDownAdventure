@@ -12,7 +12,6 @@ Top-Down Adventure is a high-fantasy action RPG built using Pygame. It features 
 - [Features](#features)
 - [Game Files](#game-files)
 - [Controls](#controls)
-- [Known Issues](#known-issues)
 - [Future Improvements](#future-improvements)
 - [License](#license)
 
